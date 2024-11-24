@@ -130,10 +130,26 @@ a:focus {
 .current-details {
     font-size: 18px;
     line-height: 1.5;
+    color: #dcdde1;
+}
+
+.current-details strong {
+    font-weight: bold;
+    color: #ffcc00;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-size: 18px; 
 }
 
 .current-temperature {
     margin-top: 10px;
     font-size: 48px;
     font-weight: bold;
+}
+
+weather-icon {
+    font-size: 64px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+    display: inline-block;
 }
