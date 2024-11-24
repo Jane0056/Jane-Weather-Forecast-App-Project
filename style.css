@@ -35,7 +35,7 @@ a:focus,
 button:focus,
 input:focus {
     outline: 3px solid rgba(255, 255, 255, 0.8);
-    outline-offset: 2px;
+    outline-offset: 3px;
     /* Improves focus visibility */
 }
 
@@ -52,10 +52,46 @@ input:focus {
     }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Text Styles */
 body p {
     color: rgba(255, 255, 255, 0.9);
-    /* Slightly reduced opacity for smooth readability */
     line-height: 1.6;
-    /* Enhances line spacing for readability */
+}
+
+/* Enhanced link styles */
+a {
+    color: #011429;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+    color: rgba(255, 255, 255, 0.9);
+    outline: none;
+}
+
+/* Weather App Container */
+.weather-app {
+    margin: 20px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+    width: 100%;
+    max-width: 700px;
 }
