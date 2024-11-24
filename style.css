@@ -22,22 +22,6 @@ body {
     position: relative;
 }
 
-/* Accessibility: Reduced Motion */
-@media (prefers-reduced-motion: reduce) {
-    body {
-        animation: none;
-        /* Disables animations for reduced motion preference */
-    }
-}
-
-/* Accessible focus styles */
-a:focus,
-button:focus,
-input:focus {
-    outline: 3px solid rgba(255, 255, 255, 0.8);
-    outline-offset: 3px;
-    /* Improves focus visibility */
-}
 
 /* Animation Keyframes */
 @keyframes moveClouds {
@@ -64,10 +48,13 @@ input:focus {
     }
 }
 
-/* Text Styles */
-body p {
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.6;
+/* Accessible focus styles */
+a:focus,
+button:focus,
+input:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.8);
+    outline-offset: 3px;
+    /* Improves focus visibility */
 }
 
 /* Enhanced link styles */
@@ -94,4 +81,98 @@ a:focus {
     animation: fadeIn 1.5s ease-in-out;
     width: 100%;
     max-width: 700px;
+    text-align: center;
+}
+
+
+/* Form and Input */
+.search-form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #1a8ad3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+    .search-form {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .search-input,
+    .search-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .current-city {
+        font-size: 24px;
+    }
+
+    .current-temperature {
+        font-size: 36px;
+    }
+
+    .weather-forecast {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: contain;
+    }
+
+    .weather-app {
+        max-width: 500px;
+    }
+
+    .current-city {
+        font-size: 28px;
+    }
+
+    .current-temperature {
+        font-size: 48px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .weather-app {
+        max-width: 700px;
+    }
+
+    .current-city {
+        font-size: 38px;
+    }
+
+    .current-temperature {
+        font-size: 72px;
+    }
 }
