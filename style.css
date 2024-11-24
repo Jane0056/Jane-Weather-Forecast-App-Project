@@ -1,0 +1,61 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+    background:
+        linear-gradient(90deg, rgba(21, 74, 189, 0.8), rgba(26, 138, 211, 0.7)),
+        url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/151/362/original/360_F_641918542_bL3O5qWqKmaVrxM12Qa1pp1owFvKKP3k.jpg?1732486435") no-repeat center center fixed;
+    background-blend-mode: overlay;
+    background-size: cover;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    animation: moveClouds 30s linear infinite;
+    position: relative;
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    body {
+        animation: none;
+        /* Disables animations for reduced motion preference */
+    }
+}
+
+/* Accessible focus styles */
+a:focus,
+button:focus,
+input:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.8);
+    outline-offset: 2px;
+    /* Improves focus visibility */
+}
+
+/* Animation Keyframes */
+@keyframes moveClouds {
+    from {
+        background-position: 0 0;
+        /* Starting position */
+    }
+
+    to {
+        background-position: 100% 0;
+        /* Ending position */
+    }
+}
+
+/* Text Styles */
+body p {
+    color: rgba(255, 255, 255, 0.9);
+    /* Slightly reduced opacity for smooth readability */
+    line-height: 1.6;
+    /* Enhances line spacing for readability */
+}
