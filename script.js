@@ -17,4 +17,15 @@ function refreshWeather(response) {
   let iconCode = response.data.weather[0].icon;
   let date = new Date(response.data.dt * 1000);
 
- 
+  // Update the DOM elements
+  cityElement.innerHTML = city;
+  timeElement.innerHTML = formatDate(date);
+  descriptionElement.innerHTML = description;
+  humidityElement.innerHTML = `${humidity}%`;
+  windSpeedElement.innerHTML = `${Math.round(windSpeed)} km/h`;
+  temperatureElement.innerHTML = Math.round(temperature);
+  iconElement.innerHTML = `<img src="https://openweathermap.org/img/wn/${iconCode}@2x.png" class="weather-icon" />`;
+
+  // Fetch the forecast for the city
+  getForecast(city);
+}
