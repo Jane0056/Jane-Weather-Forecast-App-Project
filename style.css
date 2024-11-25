@@ -8,41 +8,40 @@
 body {
     font-family: "Roboto", Arial, sans-serif;
     height: 100vh;
-    background:
-        linear-gradient(90deg, rgba(21, 74, 189, 0.8), rgba(26, 138, 211, 0.7)),
-        url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/151/362/original/360_F_641918542_bL3O5qWqKmaVrxM12Qa1pp1owFvKKP3k.jpg?1732486435") no-repeat center center fixed;
-    background-blend-mode: overlay;
+    background: linear-gradient(90deg, rgba(21, 74, 189, 0.8), rgba(26, 138, 211, 0.7)),
+        url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/151/362/original/360_F_641918542_bL3O5qWqKmaVrxM12Qa1pp1owFvKKP3k.jpg?1732486435");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
-    color: #ffffff;
+    background-blend-mode: overlay;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow-y: auto;
-    animation: moveClouds 30s linear infinite;
+    overflow: hidden;
     position: relative;
+    animation: moveClouds 30s linear infinite;
 }
-
 
 /* Animation Keyframes */
 @keyframes moveClouds {
-    from {
+    0% {
         background-position: 0 0;
-        /* Starting position */
     }
 
-    to {
+    100% {
         background-position: 100% 0;
-        /* Ending position */
     }
 }
 
 @keyframes fadeIn {
-    from {
+    0% {
         opacity: 0;
         transform: translateY(20px);
     }
 
-    to {
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
@@ -56,31 +55,41 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     animation: fadeIn 1.5s ease-in-out;
-    width: 100%;
     max-width: 700px;
+    width: 100%;
     text-align: center;
 }
 
 /* Form and Input */
 .search-form {
     display: flex;
-    flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 20px;
     justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
 }
 
+
 .search-input {
-    padding: 10px;
+    padding: 12px;
     font-size: 16px;
-    border: 1px solid #ddd;
+    border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 5px;
     flex: 1;
     min-width: 200px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #ffcc00;
 }
 
 .search-button {
-    padding: 10px 20px;
+    padding: 12px 20px;
     font-size: 16px;
     background-color: #1a8ad3;
     color: #fff;
@@ -95,38 +104,52 @@ body {
 }
 
 /* Current Weather Information */
+main {
+    padding: 30px 0;
+}
+
 .current-weather {
-    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .current-city {
     font-size: 36px;
-    margin-bottom: 10px;
+    line-height: 48px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .current-details {
     font-size: 18px;
-    line-height: 1.5;
+    line-height: 24px;
     color: #dcdde1;
+    font-weight: 500;
 }
 
 .current-details strong {
-    font-weight: bold;
     color: #ffcc00;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .current-temperature {
-    margin-top: 10px;
-    font-size: 48px;
-    font-weight: bold;
+    display: flex;
 }
 
 .weather-icon {
-    font-size: 64px;
-    color: #ffffff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    margin-bottom: 10px;
+    width: 88px;
+    height: 88px;
+}
+
+.current-temperature-value {
+    font-size: 85px;
+    line-height: 85px;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.weather-app-unit {
+    margin-top: 6px;
+    font-size: 28px;
 }
 
 /* Forecast Section */
@@ -142,20 +165,23 @@ body {
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
-
 .forecast-item:hover {
-    background-color: #0056b3;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
 }
 
 .weather-forecast-day {
     font-size: 18px;
     margin-bottom: 5px;
+    color: #fff;
 }
 
-.weather-forecast-icon {
-    font-size: 24px;
+.weather-forecast-icon img {
+    width: 50px;
+    height: 50px;
     margin-bottom: 5px;
 }
 
@@ -166,9 +192,10 @@ body {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
+
 footer {
     margin-top: 20px;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 footer a {

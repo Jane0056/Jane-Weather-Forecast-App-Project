@@ -13,57 +13,49 @@
 </head>
 
 <body>
-
-    <body>
-        <div class="weather-app">
-            <header>
-                <form id="search-form" class="search-form">
-                    <input type="search" placeholder="Enter a city..." required class="search-input" id="search-input"
-                        aria-label="City Search" />
-                    <button type="submit" class="search-button">Search</button>
-                </form>
-            </header>
-            <main>
-                <div class="current-weather">
-                    <h1 class="current-city" id="current-city"></h1>
+    <div class="weather-app">
+        <header>
+            <form id="search-form" class="search-form">
+                <input type="search" placeholder="Enter a city..." required class="search-input" id="search-input"
+                    aria-label="City Search" />
+                <button type="submit" class="search-button">Search</button>
+            </form>
+        </header>
+        <main>
+            <div class="current-weather">
+                <div>
+                    <h1 class="current-city" id="current-city">Paris</h1>
                     <p class="current-details" id="current-details">
                         <span id="time"></span>,
-                        <span id="description"></span>
-                        <br>
-                        Humidity: <strong><span id="humidity-details"></span></strong>,
-                        Wind: <strong><span id="speed-details"></span></strong>
+                        <span id="description">moderate rain</span>
+                        <br />
+                        Humidity: <strong><span id="humidity-details">87%</span></strong>,
+                        Wind: <strong><span id="speed-details">7.2 km/h</span></strong>
                     </p>
+                </div>
 
-                    <div class="current-temperature">
-                        <span id="icon" class="weather-icon">☁️</span>
+                <div class="current-temperature" id="current-temperature">
+                    <div id="icon" class="weather-icon"></div>
+                    <div>
                         <span class="current-temperature-value" id="current-temperature-value"></span>
                         <span class="current-temperature-unit">°C</span>
                     </div>
                 </div>
-                <div class="weather-forecast" id="forecast">
-                    <div class="forecast-item">
-                        <p class="weather-forecast-day">Mon</p>
-                        <div class="weather-forecast-icon">☁️</div>
-                        <div class="weather-forecast-temperatures">
-                            <span class="weather-forecast-temperature">22°C</span> | <span
-                                class="weather-forecast-temperature">15°C</span>
-                        </div>
-                    </div>
-                </div>
-            </main>
-            <footer>
-                <p>
-                    This project was coded by
-                    <a href="https://jane-forecastapp-project.netlify.app/" target="_blank">Chioma Jane Agwuncha</a> and
-                    is
-                    <a href="https://github.com/Jane0056/Weather-Forecast-Project" target="_blank">on GitHub</a> and
-                    <a href="https://jane-forecastapp-project.netlify.app/" target="_blank">hosted on Netlify</a>
-                </p>
-            </footer>
-        </div>
-        <script src="script.js"></script>
-
-
-    </body>
+            </div>
+            <div class="weather-forecast" id="forecast">
+                <!-- Forecast data will be dynamically populated here -->
+            </div>
+        </main>
+        <footer>
+            <p>
+                This project was coded by
+                <a href="https://jane-forecastapp-project.netlify.app/" target="_blank">Chioma Jane Agwuncha</a> and is
+                <a href="https://github.com/Jane0056/Weather-Forecast-Project" target="_blank">on GitHub</a> and
+                <a href="https://jane-forecastapp-project.netlify.app/" target="_blank">hosted on Netlify</a>
+            </p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
 
 </html>
