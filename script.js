@@ -68,3 +68,11 @@ function searchCity(city) {
       }
     });
 }
+
+// Function to handle form submission
+function search(event) {
+  event.preventDefault();
+  let searchInputElement = document.querySelector("#search-input");
+  let city = searchInputElement.value.trim();
+  if (city) searchCity(city);
+}
