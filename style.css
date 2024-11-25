@@ -178,3 +178,21 @@ weather-icon {
     font-size: 18px;
     margin-bottom: 5px;
 }
+
+.weather-forecast-icon {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.weather-forecast-temperatures {
+    font-size: 16px;
+}
+
+.weather-forecast-temperature {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    margin: 0 5px;
+}
