@@ -76,3 +76,7 @@ function search(event) {
   let city = searchInputElement.value.trim();
   if (city) searchCity(city);
 }
+
+// Add event listener to the search form
+let searchFormElement = document.querySelector("#search-form");
+searchFormElement.addEventListener("submit", search);
