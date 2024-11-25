@@ -22,18 +22,6 @@ body {
     position: relative;
 }
 
-/* Accessibility Styles */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-
 
 /* Animation Keyframes */
 @keyframes moveClouds {
@@ -141,21 +129,6 @@ body {
     margin-bottom: 10px;
 }
 
-.toggle-unit {
-    margin-top: 10px;
-    background-color: #1a8ad3;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.toggle-unit:hover {
-    background-color: #0056b3;
-}
-
 /* Forecast Section */
 .weather-forecast {
     margin-top: 20px;
@@ -192,8 +165,6 @@ body {
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
-
-
 
 footer {
     margin-top: 20px;
