@@ -80,3 +80,6 @@ function search(event) {
 // Add event listener to the search form
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", search);
+
+// Fetch default city weather on page load
+searchCity("Berlin");
