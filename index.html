@@ -20,27 +20,26 @@
                 <form id="search-form" class="search-form">
                     <input type="search" placeholder="Enter a city..." required class="search-input" id="search-input"
                         aria-label="City Search" />
-                    <button type="submit" class="search-button" aria-label="Search">Search</button>
+                    <button type="submit" class="search-button">Search</button>
                 </form>
-
-
             </header>
             <main>
                 <div class="current-weather">
-                    <h1 class="current-city" id="current-city">Paris</h1>
+                    <h1 class="current-city" id="current-city"></h1>
                     <p class="current-details" id="current-details">
-                        <span id="current-date"></span>, <span id="description">Moderate rain</span><br />
-                        Humidity: <strong><span id="humidity-details">87%</span></strong>, Wind: <strong><span
-                                id="speed-details">7.2
-                                km/h</span></strong>
+                        <span id="time"></span>,
+                        <span id="description"></span>
+                        <br>
+                        Humidity: <strong><span id="humidity-details"></span></strong>,
+                        Wind: <strong><span id="speed-details"></span></strong>
                     </p>
+
                     <div class="current-temperature">
-                        <span id="weather-icon" class="weather-icon">☁️</span>
-                        <span class="current-temperature-value" id="current-temperature-value">24</span><span
-                            class="current-temperature-unit">°C</span>
+                        <span id="icon" class="weather-icon">☁️</span>
+                        <span class="current-temperature-value" id="current-temperature-value"></span>
+                        <span class="current-temperature-unit">°C</span>
                     </div>
                 </div>
-
                 <div class="weather-forecast" id="forecast">
                     <div class="forecast-item">
                         <p class="weather-forecast-day">Mon</p>
