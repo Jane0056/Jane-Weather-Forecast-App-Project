@@ -8,4 +8,13 @@ function refreshWeather(response) {
   let timeElement = document.querySelector("#time");
   let iconElement = document.querySelector("#icon");
 
-  
+  // Extracting data from the OpenWeatherMap response
+  let temperature = response.data.main.temp;
+  let city = response.data.name;
+  let description = response.data.weather[0].description;
+  let humidity = response.data.main.humidity;
+  let windSpeed = response.data.wind.speed;
+  let iconCode = response.data.weather[0].icon;
+  let date = new Date(response.data.dt * 1000);
+
+ 
