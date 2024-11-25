@@ -4,24 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Weather Forecast App - Get real-time weather updates for any city.">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="preload" as="image"
+        href="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/151/362/original/360_F_641918542_bL3O5qWqKmaVrxM12Qa1pp1owFvKKP3k.jpg?1732486435">
     <link rel="stylesheet" href="style.css" />
 
-    <title>Weather- Forecast App </title>
+    <title>Weather Forecast App</title>
 </head>
 
 <body>
     <div class="weather-app">
-        <header>
-            <form id="search-form" class="search-form">
-                <input type="search" placeholder="Enter a city..." required class="search-input" id="search-input" />
-                <button type="submit" class="search-button">Search</button>
+        <header role="banner">
+            <form id="search-form" class="search-form" aria-labelledby="search-heading">
+                <h1 id="search-heading" class="visually-hidden">Search for a city's weather</h1>
+                <label for="search-input" class="visually-hidden">Enter a city</label>
+                <input type="search" placeholder="Enter a city..." required class="search-input" id="search-input"
+                    aria-label="City Search" />
+                <button type="submit" class="search-button" aria-label="Search">Search</button>
             </form>
         </header>
-        <main>
-            <div class="current-weather">
+        <main role="main">
+            <div class="current-weather" aria-labelledby="current-weather-heading">
+                <h2 id="current-weather-heading" class="visually-hidden">Current Weather</h2>
                 <h1 class="current-city" id="current-city">Paris</h1>
                 <p class="current-details" id="current-details">
                     <span id="current-date"></span>, <span id="description">Moderate rain</span><br />
@@ -30,13 +37,15 @@
                             km/h</span></strong>
                 </p>
                 <div class="current-temperature">
-                    <span id="weather-icon" class="weather-icon">☁️</span>
+                    <span id="weather-icon" class="weather-icon" aria-hidden="true">☁️</span>
                     <span class="current-temperature-value" id="current-temperature-value">24</span><span
                         class="current-temperature-unit">°C</span>
                 </div>
+                <button id="toggle-unit" class="toggle-unit" aria-label="Toggle temperature unit">°C / °F</button>
             </div>
 
-            <div class="weather-forecast" id="forecast">
+            <div class="weather-forecast" id="forecast" aria-labelledby="forecast-heading">
+                <h2 id="forecast-heading" class="visually-hidden">Weather Forecast</h2>
                 <div class="forecast-item">
                     <p class="weather-forecast-day">Mon</p>
                     <div class="weather-forecast-icon">☁️</div>
@@ -47,12 +56,14 @@
                 </div>
             </div>
         </main>
-        <footer>
+
+        <footer role="contentinfo">
             <p>
                 This project was coded by
                 <a href="https://jane-forecastapp-project.netlify.app/" target="_blank">Chioma Jane Agwuncha</a> and is
-                <a href="https://github.com/Jane0056/Weather-Forecast-Project" target="_blank">on GitHub</a> and
-                <a href="https://jane-forecastapp-project.netlify.app/" target="_blank">hosted on Netlify</a>
+                <a href="https://github.com/Jane0056/Jane-Weather-Forecast-App-Project" target="_blank">on GitHub</a>
+                and
+                <a href="https://jane-weather-forecast-app.netlify.app/" target="_blank">hosted on Netlify</a>
             </p>
         </footer>
     </div>

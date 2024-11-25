@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
     height: 100vh;
     background:
         linear-gradient(90deg, rgba(21, 74, 189, 0.8), rgba(26, 138, 211, 0.7)),
@@ -20,6 +20,18 @@ body {
     overflow-y: auto;
     animation: moveClouds 30s linear infinite;
     position: relative;
+}
+
+/* Accessibility Styles */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 
@@ -46,29 +58,6 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Accessible focus styles */
-a:focus,
-button:focus,
-input:focus {
-    outline: 3px solid rgba(255, 255, 255, 0.8);
-    outline-offset: 3px;
-    /* Improves focus visibility */
-}
-
-/* Enhanced link styles */
-a {
-    color: #011429;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-a:hover,
-a:focus {
-    color: rgba(255, 255, 255, 0.9);
-    outline: none;
 }
 
 /* Weather App Container */
@@ -146,12 +135,27 @@ a:focus {
     font-weight: bold;
 }
 
-weather-icon {
+.weather-icon {
     font-size: 64px;
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     margin-bottom: 10px;
     display: inline-block;
+}
+
+.toggle-unit {
+    margin-top: 10px;
+    background-color: #1a8ad3;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.toggle-unit:hover {
+    background-color: #0056b3;
 }
 
 /* Forecast Section */
